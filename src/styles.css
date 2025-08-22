@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Federo&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Amarante&family=Federo&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almendra+Display&family=Amarante&family=Federo&family=Smythe&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --color-lime: #BDF514;                    /*  var(--color-lime)    */
+  --color-purple: #45384B;                  /*  var(--color-purple)  */                 
+  --color-body: #221C25;                    /*  var(--color-body)    */
+
+  --font-body: 'Space Grotesk', sans-serif;   /*  var(--font-body)     */
+  --font-title: 'Federo', sans-serif;         /*  var(--font-title)    */
+  --font-title2: 'Amarante', sans-serif;      /*  var(--font-title2)   */
+  --font-option: 'Smythe', sans-serif;        /*  var(--font-body)     */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: white;
+
+}
+html{
+    background-color: var(--color-body);
+}
+body{
+    background-color: var(--color-body);
+    font-family: var(--font-body);
+    font-size: 20px;
+    overflow-x: hidden;
+    max-width: 1920px;
+    margin: 0 auto;
+    color: white;
+}
+main{
+    padding-top: 65px;
+}
+.btn{
+    padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: var(--color-body);
+    background-color: var(--color-lime);
+    font-family: var(--font-body);
+    display: block;
+    width: max-content;
+}
+
+.btnr{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    background-color: var(--color-lime);
+    border-radius: 30px;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.btnr svg{
+    display: block;
+    margin: 0 auto;
+}
+
+.btn.purple{
+    color: var(--color-lime);
+    background-color: var(--color-purple);
+}
+.title{
+    font-family: var(--font-title);
+    font-size: 40px;
+}
+.mb50{
+    margin-bottom: 50px;
+}
+.mb100{
+    margin-bottom: 100px;
+}

@@ -1,0 +1,163 @@
+#intro{
+    display: flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    color:white;
+}
+
+
+#intro article{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+#intro .text{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 45%;
+    padding: 125px 50px;
+}
+
+#carousel {
+    width: 50%; 
+    display: flex;
+    justify-content: center; 
+}
+
+#carousel img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+
+
+#tournament{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 100px 50px;
+
+}
+#tournament .time{
+    font-size: 40px;
+    font-family: var(--font-title);
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: calc((100% / 3) - 20px);
+    position: relative;
+    background-color: var(--color-body);
+    color: white;
+}
+.card .content{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card figure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.card .text{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 20px);
+    z-index: 2;
+}
+
+.card .btnr {
+    position: absolute;   /* sort du flux */
+    bottom: 15px;         /* distance du bas */
+    right: 15px;          /* distance de la droite */
+}
+
+.tournament svg{
+    display: block;
+    margin: 0 auto;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-lime);
+}
+
+@media (max-width: 1000px) {
+    #intro article{
+        width: 100%;
+    }
+    #intro .text{
+        width: 100%;
+        padding: 70px 25px;
+    }
+    #carousel {
+        width: 100%;
+        
+    }
+    #intro {
+        flex-direction: column-reverse;
+    }
+    .card {
+        width: calc((100% / 2) - 20px);
+    }
+  
+}
+
+@media (max-width: 1400px) {
+  
+    #intro article{
+        margin:  auto 0;
+    }
+  
+}
+@media (max-width: 600px) {
+  
+    .card {
+        width: calc((100% / 1) - 20px);
+    }
+    #intro .text{
+        width: 100%;
+        padding: 70px 25px;
+    }
+}
