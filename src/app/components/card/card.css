@@ -1,0 +1,161 @@
+#tournament .time {
+  font-size: 40px;
+  font-family: var(--font-title);
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    margin: 10px;
+    width: calc((100% / 3) - 20px);
+    position: relative;
+    color: white;
+}
+.card .content{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.card figure{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+.card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+.card .text{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 20px);
+    z-index: 2;
+}
+
+.card .btnr {
+    position: absolute;   /* sort du flux */
+    bottom: 15px;         /* distance du bas */
+    right: 15px;          /* distance de la droite */
+    z-index: 10;
+}
+/* in progress */
+.vs {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.vs img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    color: rgb(255, 255, 255);
+}
+
+.pp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.pp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+/* new  */
+
+.card .textActus {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 150px;
+}
+
+.card .textActus h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+
+.card .textActus p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #ccc;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* limite à 2 lignes */
+  -webkit-box-orient: vertical;
+  margin-bottom: 50px;
+  max-height: calc(1.4em * 2);
+  text-overflow: ellipsis;
+}
+
+.card .textActus .btnr img {
+  width: 16px;
+  height: 16px;
+}
+
+.card .textActus .btnr:hover {
+  background: #b3e600;
+}
+
+.btnr{
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #b3e600;
+
+}
+
+@media (max-width: 1000px) {
+    .card {
+        width: calc((100% / 2) - 20px);
+    }
+  
+}
+
+@media (max-width: 600px) {
+  
+    .card {
+        width: calc((100% / 1) - 20px);
+    }
+
+}

@@ -64,12 +64,20 @@ main{
     justify-content: center;
    
 }
-.btnr svg{
+.btnr img{
     display: block;
     margin: 0 auto;
 }
 
 .btn.purple{
+    color: var(--color-lime);
+    background-color: var(--color-purple);
+}
+.btn.body{
+    color: var(--color-lime);
+    background-color: var(--color-body);
+}
+.btn.lime{
     color: var(--color-lime);
     background-color: var(--color-purple);
 }
@@ -82,4 +90,22 @@ main{
 }
 .mb100{
     margin-bottom: 100px;
+}
+
+.title{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    position: relative;
+}
+.title.yellow{
+    color: var(--color-lime);
+    font-size: 40px;
+    font-family: var(--font-title);
+  
+}
+.line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-lime);
 }
