@@ -1,0 +1,20 @@
+<main>
+  <div class="profile">
+    <form class="pp">
+      <img src="assets/valo.jpg" alt="" />
+      <a class="textavatar">change avatar</a>
+    </form>
+    <form [formGroup]="form" (ngSubmit)="submitUser()">
+      <div>
+        <input type="text" name="email" placeholder="email" formControlName="email" />
+      </div>
+      <div>
+        <input type="text" name="username" placeholder="username" formControlName="username" />
+      </div>
+      <div>
+        <input type="password" formControlName="password" placeholder="password" />
+      </div>
+      <button class="btn">save</button>
+    </form>
+  </div>
+</main>
