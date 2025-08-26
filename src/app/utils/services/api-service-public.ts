@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { UserRegister, UserPublic} from '../types/UserPublic';
+import {Tournament} from '../types/Tournament';
 
 @Injectable({
   providedIn: 'root'
@@ -39,5 +40,14 @@ export class ApiServicePublic {
     return this.http.get<UserPublic>(this.baseUrl + '/user/' + id)
   }
 
+  getTournaments() : Observable<Tournament[]>{
+    return this.http.get<Tournament[]>(this.baseUrl + '/tournament')
+  }
+
+  getTournament(id : bigint) : Observable<Tournament>{
+    return this.http.get<Tournament>(this.baseUrl + '/tournament/'+id)
+  }
+
+  /*getMatchsByTournament(id : bigint) : */
 
 }
