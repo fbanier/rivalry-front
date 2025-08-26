@@ -1,0 +1,15 @@
+#dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 65px;
+    padding: 50px 50px;
+}
+.titleChange{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+.title {
+    width: auto;
+}
