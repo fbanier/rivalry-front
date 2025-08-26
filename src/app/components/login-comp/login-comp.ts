@@ -2,23 +2,21 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../../utils/services/api-service';
 import { Router } from '@angular/router';
+
 type User = {
   email: string;
-  username: string;
   password: string;
 };
 
-
 @Component({
-  selector: 'app-register',
+  selector: 'app-login-comp',
   imports: [ReactiveFormsModule],
-  templateUrl: './register.html',
-  styleUrl: './register.css'
+  templateUrl: './login-comp.html',
+  styleUrl: './login-comp.css',
 })
-export class Register {
+export class LoginComp {
   form: FormGroup = new FormGroup({
     email: new FormControl(''),
-    username: new FormControl(''),
     password: new FormControl(''),
   });
 
