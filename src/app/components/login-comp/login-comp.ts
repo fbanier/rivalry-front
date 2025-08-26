@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { ApiService } from '../../utils/services/api-service';
+import { ApiServicePublic } from '../../utils/services/api-service-public';
 import { Router } from '@angular/router';
 
 type User = {
@@ -20,7 +20,7 @@ export class LoginComp {
     password: new FormControl(''),
   });
 
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(private apiService: ApiServicePublic, private router: Router) {}
 
   submitUser() {
     let user = this.form.value as Pick<User, 'email' | 'password'>;
@@ -33,7 +33,7 @@ export class LoginComp {
           alert('Login failed');
         }
       }
-      
+
     });
   }
 }

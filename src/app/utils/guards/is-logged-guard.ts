@@ -1,14 +1,14 @@
 import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
-import { ApiService } from '../services/api-service';
+import { ApiServicePublic } from '../services/api-service-public';
 
 export const isLoggedGuard: CanActivateFn = (route, state) => {
-  const apiService = inject(ApiService)
+  const apiService = inject(ApiServicePublic)
   const router = inject(Router)
   const token = apiService.getToken()
 
   if(!token) {
-    router.navigate(["/login","/register","/"])
+    router.navigate(["/login","/register","/", "/tournaments", "/tournament"])
     return false
   }
 
