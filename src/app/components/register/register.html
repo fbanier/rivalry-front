@@ -1,17 +1,15 @@
 <form [formGroup]="form" (ngSubmit)="submitUser()">
     <div>
         <label for="email">Email</label>
-        <input type="text" name="email" formControlName="email">
+      <input type="text" formControlName="email">
     </div>
     <div>
         <label for="username">username</label>
-        <input type="text" name="username" formControlName="username">
+        <input type="text" formControlName="username">
     </div>
     <div>
         <label for="password">Password</label>
         <input type="password" formControlName="password">
     </div>
     <button>Login</button>
-
-    
 </form>

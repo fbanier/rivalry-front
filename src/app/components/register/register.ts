@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { ApiServicePublic } from '../../utils/services/api-service-public';
 import { Router } from '@angular/router';
-type User = {
-  email: string;
-  username: string;
-  password: string;
-};
+import { UserRegister, UserPublic} from '../../utils/types/UserPublic';
 
 
 @Component({
@@ -16,17 +12,46 @@ type User = {
   styleUrl: './register.css'
 })
 export class Register {
+  isSubmitted: boolean = false
+
+  newUser: UserRegister = {
+    email: "",
+    username: "",
+    password: "",
+    active : true
+  }
+
   form: FormGroup = new FormGroup({
-    email: new FormControl(''),
-    username: new FormControl(''),
-    password: new FormControl(''),
+    email: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    username: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    password: new FormControl('', [Validators.required, Validators.minLength(8)]),
   });
 
-  constructor(private apiService: ApiServicePublic, private router: Router) {}
+  constructor(private apiService: ApiServicePublic, private router :  Router) {}
+
 
   submitUser() {
-   // this.apiService.register()
+    if (this.form.valid) {
+      this.isSubmitted = true
+      let user = this.form.value as UserRegister
+      this.apiService.register(user).subscribe({
+        next : res => {
+          console.log('ok')
+        }, error : err => console.log(err)
+      })
+      this.form.reset();
 
-    console.log("sub")
+      this.apiService.login (user).subscribe({
+        next : res => {
+          console.log('login....')
+          window.location.href = '/'
+        }, error : err => console.log(err)
+      })
+    }
   }
+
+
+
+
+
 }
