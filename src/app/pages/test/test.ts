@@ -1,15 +1,9 @@
 import {
-  AfterContentInit,
-  afterNextRender,
-  AfterViewChecked,
-  AfterViewInit,
-  Component, ElementRef, Inject,
+  Component,Inject,
   OnDestroy,
   OnInit, PLATFORM_ID,
-  ViewChild
 } from '@angular/core';
 import { ApiServicePublic } from '../../utils/services/api-service-public';
-import { error } from 'node:console'
 import {ApiServiceAdmin} from '../../utils/services/api-service-admin';
 import {UserRegister} from '../../utils/types/UserPublic';
 import {isPlatformBrowser} from '@angular/common';

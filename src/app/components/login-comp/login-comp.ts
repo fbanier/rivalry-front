@@ -23,17 +23,6 @@ export class LoginComp {
   constructor(private apiService: ApiServicePublic, private router: Router) {}
 
   submitUser() {
-    let user = this.form.value as Pick<User, 'email' | 'password'>;
-    this.apiService.login(user).subscribe({
-      next: res => {
-        if (res.accessToken) {
-          this.router.navigate(['/']);
-          alert(this.apiService.getToken());
-        } else {
-          alert('Login failed');
-        }
-      }
-
-    });
+    console.log("sub")
   }
 }
