@@ -1,0 +1,44 @@
+<main id="homePage">
+  <section id="intro">
+    <article class="text">
+      <h1 class="title">Compete with elegance</h1>
+      <p class="mb50">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam aliquam condimentum neque,
+        in venenatis turpis porttitor sed. Sed tempus libero ac diam vestibulum porttitor.
+      </p>
+      <a class="btn">TOURNAMENT</a>
+    </article>
+    <article class="carousel">
+      <img src="assets/rl.jpg" alt="" />
+    </article>
+  </section>
+
+  <div id="tournament">
+    <h2 class="title yellow">Incoming tournament</h2>
+    <div class="line"></div>
+    <div class="cards">
+      <app-card [limit]="3" [statusCard]="Status.INCOMING"></app-card>
+    </div>
+    <div class="center">
+      <a class="btn body" routerLink="/tournaments">SEE ALL</a>
+    </div>
+  </div>
+
+  <div id="inprogress">
+    <h2 class="title yellow">In progress</h2>
+    <div class="line"></div>
+    <app-card [limit]="3" [statusCard]="Status.INPROGRESS"></app-card>
+    <div class="center">
+      <a class="btn purple" routerLink="/tournaments">SEE ALL</a>
+    </div>
+  </div>
+
+  <div id="news">
+    <h2 class="title yellow">News</h2>
+    <div class="line"></div>
+    <app-news></app-news>
+    <div class="center">
+      <a class="btn body" routerLink="/news">SEE ALL</a>
+    </div>
+  </div>
+</main>

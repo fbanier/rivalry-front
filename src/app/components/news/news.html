@@ -1,0 +1,19 @@
+<section id="news">
+  
+    <div class="cards">
+        @for (comment of comments; track comment ; let i = $index) {
+      <article class="card">
+        <div class="content">
+          <figure><img src="assets/{{comment.image}}" alt="game" /></figure>
+          <div class="textActus">
+            <h3>{{comment.name}}</h3>
+            <p>{{comment.text}}</p>
+            <a class="btnr" routerLink="/">
+              <img src="assets/arrow.svg" alt="Voir plus">
+            </a>
+          </div>
+        </div>
+      </article>}
+    </div>
+  </section>
+  

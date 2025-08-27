@@ -1,0 +1,64 @@
+<div class="cards">
+  @for (card of displayedCards; track card; let i = $index) { @if (card.status ===
+  Status.INPROGRESS) {
+  <article class="card">
+    <div class="content">
+      <figure><img src="assets/{{ card.image }}" alt="" /></figure>
+      <div class="text">
+        <h3>{{ card.title }}</h3>
+        <div class="vs">
+          <div class="pp">
+            <img src="assets/{{ card.player1?.image }}" alt="" />
+            <p>{{ card.player1?.name }}</p>
+          </div>
+          <img src="assets/versus.svg" alt="" />
+          <div class="pp">
+            <img src="assets/{{ card.player2?.image }}" alt="" />
+            <p>{{ card.player2?.name }}</p>
+          </div>
+        </div>
+
+        <div>
+          <a class="btnr" routerLink="/">
+            <img src="assets/arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  } @if (card.status === Status.INCOMING) {
+
+  <article class="card">
+    <div class="content">
+      <figure><img src="assets/{{ card.image }}" alt="" /></figure>
+      <div class="text">
+        <h3>{{ card.title }}</h3>
+        <p class="time">{{ card.time }}</p>
+        <p>{{ card.players }}</p>
+        <div>
+          <a class="btnr" routerLink="/">
+            <img src="assets/arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  } @if (card.status === Status.FINISHED) {
+  <article class="card">
+    <div class="content">
+      <figure><img src="assets/{{ card.image }}" alt="" /></figure>
+      <div class="text">
+        <h3>{{ card.title }}</h3>
+        <p class="time">Finished</p>
+        <p>{{ card.players }}</p>
+        <div>
+          <a class="btnr" routerLink="/">
+            <img src="assets/arrow.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+  } }
+</div>

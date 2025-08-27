@@ -1,0 +1,104 @@
+#tournament{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 50px;
+
+}
+#inprogress{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 50px;
+
+}
+#finished{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 50px;
+}
+
+::ng-deep #tournaments .cards .card {
+    width: calc((100% / 4) - 20px) !important;
+  }
+
+.center{
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+}
+.pp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.pp img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.games {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* permet le retour à la ligne */
+    justify-content: center; /* centre les éléments */
+    gap: 20px;
+    max-width: 1000px; /* limite la largeur max */
+    width: auto;
+    border: 1px solid var(--color-lime);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .pp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    border-radius: 10px;
+    
+    padding: 10px;
+    width: calc((100% / 5) - 20px); /* 5 éléments par ligne */
+  }
+  .pp :hover{
+    cursor: pointer;
+    background-color: var(--color-purple);
+  }
+  .pp img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Responsive : 3 colonnes max en tablette */
+  @media (max-width: 900px) {
+    .pp {
+      width: calc((100% / 3) - 20px);
+    }
+  }
+  
+  /* Responsive : 2 colonnes max en mobile */
+  @media (max-width: 600px) {
+    .pp {
+      width: calc((100% / 2) - 20px);
+    }
+  }
+  
+  /* Responsive : 1 colonne en très petit écran */
+  @media (max-width: 400px) {
+    .pp {
+      width: 100%;
+    }
+  }
+  
