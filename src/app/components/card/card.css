@@ -58,7 +58,8 @@
     position: absolute;   /* sort du flux */
     bottom: 15px;         /* distance du bas */
     right: 15px;          /* distance de la droite */
-    z-index: 10;
+    z-index: 155;
+    cursor: pointer;
 }
 /* in progress */
 .vs {

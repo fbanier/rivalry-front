@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Status } from '../../enum/status';
+import { RouterLink } from '@angular/router';
 
 type Player = {
   name: string;
@@ -21,6 +22,7 @@ type Card = {
 @Component({
   selector: 'app-card',
   templateUrl: './card.html',
+  imports: [RouterLink],
   styleUrl: './card.css',
   standalone: true,
 })
