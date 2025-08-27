@@ -1,17 +1,34 @@
-<article class="bannier">
+<main>
+   <article class="card">
   <div class="content">
-    <figure><img src="assets/{{ card.game }}" alt="" /></figure>
+    <figure><img src="assets/valo.jpg" alt="" /></figure>
     <div class="text">
       <div>
-        <h3>{{ card.name }}</h3>
+        <h3 class="title">{{ card.name }}</h3>
         <p class="time">{{ card.description }}</p>
       </div>
-      <div>
-        <p>{{ card.beginDate}}</p>
-        <p>{{ card.numberOfPlayers }}</p>
-        <p>{{ card.game }}</p>
-        <p>{{ card.format }}</p>
+      <div class="infos">
+        <div>
+            <img src="assets/date.svg" alt="">
+            <p>  {{ card.beginDate}}</p>
+        </div>
+        <div>
+            <img src="assets/group.svg" alt="">
+            <p>{{ card.numberOfPlayers }} players</p>
+        </div>
+        <div>
+            <img src="assets/game.svg" alt="">
+            <p>{{ card.game }}</p>
+        </div>
+        <div>
+            <img src="assets/tree.svg" alt="">
+            <p>{{ card.format }}</p>
+        </div>
+        
+        
       </div>
     </div>
   </div>
 </article>
+ 
+</main>
