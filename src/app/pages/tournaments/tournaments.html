@@ -1,47 +1,51 @@
 <main id="tournaments">
-<div class="games">
-    <div class="container">
-      <div class="pp" (click)="filterGame('valorant')">
+  <main>
+    <div class="titlecenter">
+      <h2 class="title yellow">tournaments</h2>
+    </div>
+    <div class="games">
+      <div class="container">
+        <div class="pp" (click)="filterGame('valorant')">
           <img src="assets/valo.jpg" alt="" />
           <p>valorant</p>
-      </div>
-      <div class="pp" (click)="filterGame('rocket league')">
+        </div>
+        <div class="pp" (click)="filterGame('rocket league')">
           <img src="assets/rl.jpg" alt="" />
           <p>rocket league</p>
-      </div>
-      <div class="pp" (click)="filterGame('league of legends')">
+        </div>
+        <div class="pp" (click)="filterGame('league of legends')">
           <img src="assets/lol.jpg" alt="" />
           <p>league of legends</p>
-      </div>
-      <div class="pp" (click)="filterGame('street fighter 6')">
+        </div>
+        <div class="pp" (click)="filterGame('street fighter 6')">
           <img src="assets/sf6.jpg" alt="" />
           <p>street fighter 6</p>
-      </div>
-      <div class="pp" (click)="filterGame('smash')">
+        </div>
+        <div class="pp" (click)="filterGame('smash')">
           <img src="assets/smash.jpg" alt="" />
           <p>smash</p>
+        </div>
       </div>
     </div>
-  </div>
-  
 
-<div id="tournament">
-  <h2 class="title yellow">Incoming tournament</h2>
-  <div class="line"></div>
-  <div class="cards">
-    <app-card [statusCard]="Status.INCOMING"></app-card>
-  </div>
-</div>
+    <div id="tournament">
+      <h2 class="title yellow">Incoming tournament</h2>
+      <div class="line"></div>
+      <div class="cards">
+        <app-card [statusCard]="Status.INCOMING"></app-card>
+      </div>
+    </div>
 
-<div id="inprogress">
-  <h2 class="title yellow">In progress</h2>
-  <div class="line"></div>
-  <app-card [statusCard]="Status.INPROGRESS"></app-card>
-</div>
+    <div id="inprogress">
+      <h2 class="title yellow">In progress</h2>
+      <div class="line"></div>
+      <app-card [statusCard]="Status.INPROGRESS"></app-card>
+    </div>
 
-<div id="finished">
-  <h2 class="title yellow">Finished</h2>
-  <div class="line"></div>
-  <app-card [statusCard]="Status.FINISHED"></app-card>
-</div>
+    <div id="finished">
+      <h2 class="title yellow">Finished</h2>
+      <div class="line"></div>
+      <app-card [statusCard]="Status.FINISHED"></app-card>
+    </div>
+  </main>
 </main>

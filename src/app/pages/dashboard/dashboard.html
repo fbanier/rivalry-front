@@ -1,12 +1,16 @@
 <main id="dashboard">
     <div class="titleCantainer">
-         <div class="titleChange">
-        <a class="title yellow" routerLink="/dashboard">dashboard</a>
-        <a  class="title yellow" routerLink="/MyTournaments">My tournaments</a>
-        
+      <div class="titleChange">
+        <a type="button" class="title yellow" routerLink="/profile" >Dashboard</a>
+        <a type="button"  class="title yellow" routerLink="/mytournaments" >My tournaments</a>
+      
+      </div>
+      <div class="line"></div>
     </div>
-    <div class="line"></div>
-    </div>
-   
-    <app-profile/>
-</main>
+  
+    <router-outlet></router-outlet>
+    
+  
+    
+  </main>
+  
