@@ -26,44 +26,24 @@ export class Test implements OnInit, OnDestroy{
     active : true
   }
 
-
   // Au chargement du composant
   ngOnInit(): void {
     this.isBrowser = isPlatformBrowser(this.platformId);
     if (this.isBrowser) {
       this.apiServicePublic.login(this.user).subscribe({
         next: data => {
-          //localStorage.setItem('token', data)
           console.log(data);
         },
         error: err => console.error(err)
       })
     }
-    /* this.apiServicePublic.login(this.user).subscribe({
-       next: data => {
-         console.log(data);
-       },
-       error: err => console.error(err)
-     })*/
-  }
-
-  ngAfterContentInit(): void {
-   /* this.apiServicePublic.getUser(2n).subscribe({
+    this.apiService.getUser(2n).subscribe({
       next: data => {
         console.log(data);
       },
       error: err => console.error(err)
-    })*/
-/*    this.apiServicePublic.login(this.user).subscribe({
-      next: data => {
-        console.log(data);
-      },
-      error: err => console.error(err)
-    })*/
+    })
   }
-
-
-
 
   ngOnDestroy(): void {
     console.log("On destroy");

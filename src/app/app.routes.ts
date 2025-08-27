@@ -5,6 +5,7 @@ import { Login } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Mytournaments } from './components/mytournaments/mytournaments';
 import { Profile } from './components/profile/profile';
+import {Test} from './pages/test/test';
 
 export const routes: Routes = [
   {path:"",component: Homepage},
@@ -13,4 +14,5 @@ export const routes: Routes = [
   {path:"dashboard",component: Dashboard},
   {path:"mytournaments",component: Mytournaments},
   {path:"profile",component: Profile},
+  {path:"test",component: Test},
 ];
