@@ -34,19 +34,17 @@ export class Register {
     if (this.form.valid) {
       this.isSubmitted = true
       let user = this.form.value as UserRegister
-      this.apiService.register(user).subscribe({
-        next : res => {
-          console.log('ok')
-        }, error : err => console.log(err)
+      this.apiService.register({...user, active: true}).subscribe(res => {
+        console.log(res);
+        this.apiService.login(user).subscribe(res => {
+          console.log('Response', res);
+          console.log('Logged!');
+          
+        })
+        
       })
       this.form.reset();
 
-      this.apiService.login (user).subscribe({
-        next : res => {
-          console.log('login....')
-          window.location.href = '/'
-        }, error : err => console.log(err)
-      })
     }
   }
 
