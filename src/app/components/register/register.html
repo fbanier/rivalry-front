@@ -1,15 +1,41 @@
-<form [formGroup]="form" (ngSubmit)="submitUser()" class="form">
-    <div>
+<main id="loginPage">
+  <section>
+    <h1 class="title">Register</h1>
+    <form [formGroup]="form" (ngSubmit)="submitUser()" class="form">
+      <div>
         <label for="email">Email</label>
-      <input type="text" formControlName="email">
-    </div>
-    <div>
-        <label for="username">username</label>
+        <input type="text" formControlName="email">
+      </div>
+      <div>
+        <label for="username">Username</label>
         <input type="text" formControlName="username">
-    </div>
-    <div>
+      </div>
+      <div>
         <label for="password">Password</label>
         <input type="password" formControlName="password">
-    </div>
-    <button>Login</button>
-</form>
+      </div>
+      <button class="btn">Sigin</button>
+    </form>
+  </section>
+
+   <section>
+     <h2 class="title">Login</h2>
+     <form [formGroup]="form" (ngSubmit)="loginUser()" class="form">
+       <div>
+         <label for="email">Email</label>
+         <input type="text" formControlName="email">
+       </div>
+       <div>
+         <label for="password">Password</label>
+         <input type="password" formControlName="password">
+       </div>
+       <button class="btn">Login</button>
+     </form>
+   </section>
+
+
+
+</main>
+
+
+

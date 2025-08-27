@@ -29,7 +29,7 @@ a {
 html{
   background-color: var(--color-body);
 }
-body{
+body, input[type=text], input[type=file], input[type=password], button, select, textarea{
   background-color: var(--color-body);
   font-family: var(--font-body);
   font-size: 20px;
@@ -125,4 +125,106 @@ input{
   width: 100%;
   height: 1px;
   background-color: var(--color-lime);
+}
+
+input[type=text], input[type=file], input[type=password], button, select, textarea{
+  border:none;
+  border-radius:0;
+  -webkit-border-radius:0px;
+  background-color:transparent;
+  color:#fff;
+}
+
+input[type=text], input[type=file], input[type=password], button, textarea{-webkit-appearance:none;}
+
+textarea{
+  resize:none;
+  overflow:auto;
+}
+
+::-webkit-input-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+:-moz-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+::-moz-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+input::-webkit-input-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+input:-moz-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+input::-moz-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{
+  font-family: "transducer", "Transducer Regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform:uppercase;
+  opacity:1 !important;
+  color:inherit !important;
+}
+
+input:-webkit-autofill{
+  -webkit-box-shadow:0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color:#000 !important;
+}
+
+.form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--color-purple);
+  padding: 50px;
+}
+.form > div{
+  position: relative;
+  width: 100%;
+}
+.form > div label{
+  font-size: 14px;
+}
+.form > div input{
+  border-bottom: 1px solid #fff;
+  width: 100%;
+  color: #fff;
 }

@@ -12,6 +12,7 @@ import { UserRegister, UserPublic} from '../../utils/types/UserPublic';
   styleUrl: './register.css'
 })
 export class Register {
+
   isSubmitted: boolean = false
 
   newUser: UserRegister = {
@@ -35,7 +36,6 @@ export class Register {
       this.isSubmitted = true
       let user = this.form.value as UserRegister
       this.apiService.register({...user, active: true}).subscribe(res => {
-        console.log(res);
         this.apiService.login(user).subscribe(res => {
           console.log('Response', res);
           console.log('Logged!');
@@ -43,6 +43,16 @@ export class Register {
         })
       })
     }
+  }
+
+  loginUser(){
+    this.isSubmitted = true
+    let user = this.form.value as UserRegister
+    this.apiService.login(user).subscribe(res => {
+      console.log('Response', res);
+      console.log('Logged!');
+      this.router.navigate(['/']);
+    })
   }
 
 
