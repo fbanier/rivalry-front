@@ -15,8 +15,13 @@ export class ApiServicePublic {
   constructor(private http: HttpClient){}
 
   // Auth service
-  register(user : UserRegister) : Observable<UserRegister> {
-    return this.http.post<UserRegister>( this.baseUrl + "/register", user)
+  register(user : UserRegister) : Observable<any> {
+    return this.http.post<any>( this.baseUrl + "/register", user).pipe(
+      catchError(err => {
+        console.error('Error:', err)
+        return of('');
+      })
+    )
   }
 
   login(credentials: Pick<UserRegister, "email" | "password">) : Observable<{token: string, userId : number}>{
