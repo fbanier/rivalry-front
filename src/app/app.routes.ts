@@ -5,6 +5,7 @@ import { Login } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Mytournaments } from './components/mytournaments/mytournaments';
 import { Profile } from './components/profile/profile';
+import { Tournamentdetail } from './pages/tournamentdetail/tournamentdetail';
 
 export const routes: Routes = [
   {path:"",component: Homepage},
@@ -12,11 +13,12 @@ export const routes: Routes = [
   {path:"login",component: Login},
   {
     path: 'dashboard',
-    component: Dashboard, // celui qui contient ton code HTML plus haut
+    component: Dashboard, 
     children: [
       { path: 'profile', component: Profile},
       { path: 'mytournaments', component: Mytournaments},
-      { path: '', redirectTo: 'profile', pathMatch: 'full' } // par défaut afficher Profile
+      { path: '', redirectTo: 'profile', pathMatch: 'full' } 
     ]
   },
+  {path:"tournamentdetail",component: Tournamentdetail}
 ];

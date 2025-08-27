@@ -1,12 +1,12 @@
 export type Tournament = {
-  id : bigint
+  id : number
   name : string
   description :string
   beginDate : string
   endDate : string
   format : string
   numberOfPlayers : number
-  game : bigint
+  game : number
   status : string
   isActive :boolean
   playerList : []
