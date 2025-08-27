@@ -63,3 +63,17 @@ form {
     font-size: 18px;
     padding: 5px 10px;
 }
+.title {
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+  
+  .title:hover {
+    opacity: 0.8;
+  }
+  
+  .active-link {
+    opacity: 1 !important;  /* lien actif bien visible */
+    font-weight: bold;       /* optionnel */
+  }
+  

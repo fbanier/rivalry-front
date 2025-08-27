@@ -7,12 +7,24 @@ import { Mytournaments } from './components/mytournaments/mytournaments';
 import { Profile } from './components/profile/profile';
 import {Test} from './pages/test/test';
 
+import { Tournamentdetail } from './pages/tournamentdetail/tournamentdetail';
+
+
 export const routes: Routes = [
   {path:"",component: Homepage},
   {path:"tournaments",component: Tournaments},
   {path:"login",component: Login},
-  {path:"dashboard",component: Dashboard},
-  {path:"mytournaments",component: Mytournaments},
-  {path:"profile",component: Profile},
   {path:"test",component: Test},
+  
+  {
+    path: 'dashboard',
+    component: Dashboard, 
+    children: [
+      { path: 'profile', component: Profile},
+      { path: 'mytournaments', component: Mytournaments},
+      { path: '', redirectTo: 'profile', pathMatch: 'full' } 
+    ]
+  },
+  {path:"tournamentdetail",component: Tournamentdetail}
+
 ];

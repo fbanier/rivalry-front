@@ -9,10 +9,9 @@
 
 
 #intro article{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
 }
 #intro .text{
   display: flex;
