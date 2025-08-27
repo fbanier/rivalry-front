@@ -1,16 +1,24 @@
 <main id="dashboard">
-    <div class="titleCantainer">
-      <div class="titleChange">
-        <a type="button" class="title yellow" routerLink="/profile" >Dashboard</a>
-        <a type="button"  class="title yellow" routerLink="/mytournaments" >My tournaments</a>
-      
-      </div>
-      <div class="line"></div>
+  <div class="titleCantainer">
+    <div class="titleChange">
+      <a type="button"
+         class="title yellow"
+         routerLink="/dashboard/profile"
+         routerLinkActive="active-link"
+         [routerLinkActiveOptions]="{ exact: true }">
+        Dashboard
+      </a>
+
+      <a type="button"
+         class="title yellow"
+         routerLink="/dashboard/mytournaments"
+         routerLinkActive="active-link"
+         [routerLinkActiveOptions]="{ exact: true }">
+        My tournaments
+      </a>
     </div>
-  
-    <router-outlet></router-outlet>
-    
-  
-    
-  </main>
-  
+    <div class="line"></div>
+  </div>
+
+  <router-outlet></router-outlet>
+</main>

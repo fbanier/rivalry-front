@@ -1,0 +1,3 @@
+::ng-deep #tournaments .cards .card {
+    width: calc((100% / 4) - 20px) !important;
+  }

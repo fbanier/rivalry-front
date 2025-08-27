@@ -115,7 +115,7 @@ input{
 }
 
 .title{
-  width: 100%;
+  padding: 20px;
   display: flex;
   justify-content: left;
   position: relative;

@@ -10,7 +10,13 @@ export const routes: Routes = [
   {path:"",component: Homepage},
   {path:"tournaments",component: Tournaments},
   {path:"login",component: Login},
-  {path:"dashboard",component: Dashboard},
-  {path:"mytournaments",component: Mytournaments},
-  {path:"profile",component: Profile},
+  {
+    path: 'dashboard',
+    component: Dashboard, // celui qui contient ton code HTML plus haut
+    children: [
+      { path: 'profile', component: Profile},
+      { path: 'mytournaments', component: Mytournaments},
+      { path: '', redirectTo: 'profile', pathMatch: 'full' } // par défaut afficher Profile
+    ]
+  },
 ];
