@@ -39,12 +39,9 @@ export class Register {
         this.apiService.login(user).subscribe(res => {
           console.log('Response', res);
           console.log('Logged!');
-          
+          this.router.navigate(['/']);
         })
-        
       })
-      this.form.reset();
-
     }
   }
 
