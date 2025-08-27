@@ -1,0 +1,77 @@
+[
+    {
+      "title": "Rocket Leagueddddddddddddddd",
+      "image": "rl.jpg",
+      "time": "4:20",
+      "player1": { "name": "Amine", "image": "pp1.jpg" },
+      "player2": { "name": "Lucas", "image": "pp2.jpeg" },
+      "players": "3/8 players",
+      "link": "/",
+      "status": "INCOMING"
+    },
+    {
+      "title": "Street Fighter 6",
+      "image": "sf6.jpg",
+      "time": "6:10",
+      "player1": { "name": "Nina", "image": "pp1.jpg" },
+      "player2": { "name": "Karim", "image": "pp2.jpeg" },
+      "players": "8/8 players",
+      "link": "/",
+      "status": "INPROGRESS"
+    },
+    {
+      "title": "Valorant Tournament",
+      "image": "valo.jpg",
+      "time": "2:05",
+      "player1": { "name": "Lina", "image": "pp1.jpg" },
+      "player2": { "name": "Samir", "image": "pp2.jpeg" },
+      "players": "5/8 players",
+      "link": "/",
+      "status": "FINISHED"
+    },
+    {
+      "title": "League of Legends",
+      "image": "lol.jpg",
+      "time": "3:45",
+      "player1": { "name": "Maya", "image": "pp1.jpg" },
+      "player2": { "name": "Hakim", "image": "pp2.jpeg" },
+      "players": "7/8 players",
+      "link": "/",
+      "status": "INCOMING"
+    },
+    {
+      "title": "Fortnite Duo Cup",
+      "image": "fortnite.jpg",
+      "time": "2:50",
+      "player1": { "name": "Chloe", "image": "pp1.jpg" },
+      "player2": { "name": "Max", "image": "pp2.jpeg" },
+      "players": "50/100 players",
+      "link": "/",
+      "status": "INPROGRESS"
+    },
+    {
+      "title": "Minecraft Battle",
+      "image": "minecraft.jpg",
+      "time": "8:00",
+      "player1": { "name": "Léo", "image": "pp1.jpg" },
+      "player2": { "name": "Emma", "image": "pp2.jpeg" },
+      "players": "12/20 players",
+      "link": "/",
+      "status": "FINISHED"
+    },
+    {
+      "title": "Nouveau patch Valorant",
+      "image": "valo.jpg",
+      "text": "Le nouvel agent a bouleversé la meta avec ses compétences uniques.",
+      "link": "/",
+      "status": "NEWS"
+    },
+    {
+      "title": "Rocket League Worlds",
+      "image": "rl.jpg",
+      "text": "Les meilleures équipes du monde s’affrontent ce week-end en finale.",
+      "link": "/",
+      "status": "NEWS"
+    }
+  ]
+  
