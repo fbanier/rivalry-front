@@ -10,13 +10,13 @@ import { Tournament } from '../../utils/types/Tournament';
 export class BannierTournament {
   card: Tournament = {
       id : 0,
-      name : "tournaments 1",
-      description :"description",
-      beginDate : "date",
+      name : "Tournament valorant",
+      description :"Get ready for an intense 8-player Valorant showdown! Players will battle it out in a competitive tournament format, showcasing skill, strategy, and teamwork. Only one will rise to the top and claim victory—who will be the champion?",
+      beginDate : "21/08/25",
       endDate : "date",
       format : "format",
-      numberOfPlayers : 0,
-      game : 0,
+      numberOfPlayers : 8,
+      game : 1,
       status : "status",
       isActive : true,
       playerList : []

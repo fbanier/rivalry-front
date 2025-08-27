@@ -114,12 +114,7 @@ input{
   margin-bottom: 100px;
 }
 
-.title{
-  padding: 20px;
-  display: flex;
-  justify-content: left;
-  position: relative;
-}
+
 .title.yellow{
   color: var(--color-lime);
   font-size: 40px;
