@@ -37,12 +37,12 @@ export class Test implements OnInit, OnDestroy{
         error: err => console.error(err)
       })
     }
-    this.apiService.getUser(2n).subscribe({
+/*    this.apiService.getUser(2n).subscribe({
       next: data => {
         console.log(data);
       },
       error: err => console.error(err)
-    })
+    })*/
   }
 
   ngOnDestroy(): void {

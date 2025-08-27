@@ -36,10 +36,12 @@ export class Register {
       let user = this.form.value as UserRegister
       this.apiService.register(user).subscribe({
         next : res => {
-          console.log('ok')
+          console.log(res)
         }, error : err => console.log(err)
       })
       this.form.reset();
+
+      console.log(user)
 
       this.apiService.login (user).subscribe({
         next : res => {

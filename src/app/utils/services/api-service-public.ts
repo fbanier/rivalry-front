@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import {Inject, Injectable, PLATFORM_ID} from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import { UserRegister, UserPublic} from '../types/UserPublic';
+import {UserRegister, UserPublic} from '../types/UserPublic';
 import {Tournament} from '../types/Tournament';
 import {isPlatformBrowser} from '@angular/common';
 
@@ -19,10 +19,12 @@ export class ApiServicePublic {
     return this.http.post<UserRegister>( this.baseUrl + "/register", user)
   }
 
-  login(credentials: Pick<UserRegister, "email" | "password">) : Observable<{token: string}>{
-    return this.http.post<{token: string}>(this.baseUrl + "/login", credentials).pipe(
+  login(credentials: Pick<UserRegister, "email" | "password">) : Observable<{token: string, userId : number}>{
+    localStorage.clear()
+    return this.http.post<{token: string, userId : number}>(this.baseUrl + "/login", credentials).pipe(
       tap((res) => {
         localStorage.setItem("token", res.token)
+        localStorage.setItem("userId", res.userId.toString())
       }),
       catchError(err => {
         console.error(err.message)

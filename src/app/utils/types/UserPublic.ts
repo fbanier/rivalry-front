@@ -5,7 +5,7 @@ export type UserRegister = {
   active : boolean
 }
 export type UserPublic = {
-  id: bigint
+  id: number
   username : string
   avatar : string
   points: bigint
