@@ -52,6 +52,7 @@ export class Register {
       console.log('Response', res);
       console.log('Logged!');
       this.router.navigate(['/']);
+      window.location.reload();
     })
   }
 

@@ -38,6 +38,13 @@ export class ApiServicePublic {
     )
   }
 
+  getUserId(): string | null{
+    if (typeof window !== 'undefined' && window.localStorage) {
+      return localStorage.getItem('userId');
+    }
+    return null;
+  }
+
   getToken(): string | null{
     if (typeof window !== 'undefined' && window.localStorage) {
       return localStorage.getItem('token');
@@ -49,7 +56,7 @@ export class ApiServicePublic {
     return !!this.getToken();
   }
 
-  getUser(id : bigint): Observable<UserPublic>{
+  getUser(id : number): Observable<UserPublic>{
     return this.http.get<UserPublic>(this.baseUrl + '/user/' + id)
   }
 
@@ -60,8 +67,4 @@ export class ApiServicePublic {
   getTournament(id : bigint) : Observable<Tournament>{
     return this.http.get<Tournament>(this.baseUrl + '/tournament/'+id)
   }
-
-  /*getMatchsByTournament(id : bigint) : */
-
-
 }

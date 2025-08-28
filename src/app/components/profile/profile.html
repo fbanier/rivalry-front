@@ -1,18 +1,28 @@
 <div class="profile">
     <form class="pp">
-      <img src="assets/valo.jpg" alt="" />
+      @if (user != null && user.avatar != '') {
+        @if (user.avatar != null) {
+          <img [src]="'assets/'+ user.avatar" alt="" />
+        }  @else {
+          <img [src]="'https://avatar.iran.liara.run/username?username=['+user.username+']'+ user.avatar" alt="" />
+        }
+      }
       <a class="textavatar">change avatar</a>
     </form>
-    <form>
+    <form class="form" [formGroup]="form" (ngSubmit)="submitUser()">
       <div>
-        <input type="text" name="email" placeholder="email" value="{{ user.firstname }}" />
+        <label for="">username</label>
+        <input type="text" formControlName="username" placeholder="username" [value]="user != null ? user.username : ''" />
       </div>
       <div>
-        <input type="text" name="username" placeholder="username" value="{{ user.username }}"/>
+        <label for="">Firstname</label>
+        <input type="text" formControlName="firstname" placeholder="firstname" [value]="user != null ? user.firstName : ''" />
       </div>
       <div>
-        <input type="password" placeholder="password" value="{{ user.password }}"/>
+        <label for="">Lastname</label>
+        <input type="text" formControlName="lastname" placeholder="lastname" [value]="user != null ? user.lastName : ''"/>
       </div>
-      <button class="btn">save</button>
+      <button type="button" class="textavatar" (click)="logOut()">Lougout</button>
+      <button type="submit" class="btn">save</button>
     </form>
 </div>

@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { User } from '../types/UserAuth';
+import {UserRegister} from '../types/UserPublic';
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +31,12 @@ export class ApiServiceProtected {
     return this.http.get<User>(this.baseUrl + '/' +id)
   }
 
-
+  update(id : number, user : UserRegister) : Observable<any> {
+    return this.http.post<any>( this.baseUrl + "/" + id, user).pipe(
+      catchError(err => {
+        console.error('Error:', err)
+        return of('');
+      })
+    )
+  }
 }

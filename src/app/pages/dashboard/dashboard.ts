@@ -16,35 +16,5 @@ import {User} from '../../utils/types/UserAuth';
 })
 
 export class Dashboard{
-  private userId : number;
 
-  constructor(private apiService: ApiServiceProtected, private router :  Router) {
-    this.userId = Number(apiService.getUserId());
-  }
-
-  getUser() : User | null{
-    if (this.userId > 0){
-      this.apiService.getUser(this.userId).subscribe({
-        next: data => {
-           return data;
-        },
-        error: err => console.error(err)
-      })
-    }
-    return null
-  }
-
-/*  ngOnInit(): void {
-    if (this.userId > 0){
-      this.apiService.getUser(this.userId).subscribe({
-        next: data => {
-          this.user = data;
-          if (this.user == null) this.router.navigate(['/'])
-        },
-        error: err => console.error(err)
-      })
-    } else {
-      this.router.navigate(['/']);
-    }
-  }*/
 }

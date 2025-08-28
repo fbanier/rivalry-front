@@ -11,7 +11,13 @@
       </a>
     } @else {
       <a class="login" routerLink="/dashboard">
-        <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/86/866989711b4640e6c0b6112c4c23e51d1171f6f2_full.jpg" alt="">
+        @if (user != null && user.avatar != '') {
+          @if (user.avatar != null) {
+            <img [src]="'assets/'+ user.avatar" alt="" />
+          }  @else {
+            <img [src]="'https://avatar.iran.liara.run/username?username=['+user.username+']'+ user.avatar" alt="" />
+          }
+        }
       </a>
     }
 
