@@ -8,7 +8,7 @@ import { User } from '../types/UserAuth';
   providedIn: 'root'
 })
 export class ApiServiceProtected {
-  private baseUrl = "http://localhost:8080/api/public"
+  private baseUrl = "http://localhost:8080/api/private/user"
 
   constructor(private http: HttpClient){}
 
@@ -19,8 +19,15 @@ export class ApiServiceProtected {
     return null;
   }
 
-  getUser(id : bigint): Observable<User>{
-    return this.http.get<User>(this.baseUrl + '/user/' + id)
+  getUserId(): string | null{
+    if (typeof window !== 'undefined' && window.localStorage) {
+      return localStorage.getItem('userId');
+    }
+    return null;
+  }
+
+  getUser(id : number): Observable<User>{
+    return this.http.get<User>(this.baseUrl + '/' +id)
   }
 
 

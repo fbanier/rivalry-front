@@ -84,6 +84,7 @@ main{
 .title{
   font-family: var(--font-title);
   font-size: 40px;
+  font-weight: normal;
 }
 
 .titlecenter{

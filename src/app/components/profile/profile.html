@@ -5,13 +5,13 @@
     </form>
     <form>
       <div>
-        <input type="text" name="email" placeholder="email" />
+        <input type="text" name="email" placeholder="email" value="{{ user.firstname }}" />
       </div>
       <div>
-        <input type="text" name="username" placeholder="username" />
+        <input type="text" name="username" placeholder="username" value="{{ user.username }}"/>
       </div>
       <div>
-        <input type="password" placeholder="password" />
+        <input type="password" placeholder="password" value="{{ user.password }}"/>
       </div>
       <button class="btn">save</button>
     </form>

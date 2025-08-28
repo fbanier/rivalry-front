@@ -74,5 +74,4 @@ form {
 
   .active-link {
     opacity: 1 !important;  /* lien actif bien visible */
-    font-weight: bold;       /* optionnel */
   }
